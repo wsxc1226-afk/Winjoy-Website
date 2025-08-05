@@ -1,0 +1,158 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  color: #f0f0fa;
+  background-color: #3f5da2;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color:#f7f7f0;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.banner_text {
+  font-family: "Bungee", cursive;
+  user-select: none;
+}
+
+
+/* header */
+#navigation_bar {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.logo_section {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo_section #logo_wrapper {
+  margin-right: 0.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #f7f7f0;
+  border-radius: 50%;
+}
+
+header #logo_img {
+  color: #f0f0fa;
+  font-size: 2rem;
+}
+
+header a#logo {
+  font-size: 3rem;
+  font-family: "Bungee", cursive;
+  color: #f0f0fa;
+}
+
+
+.part_wrapper {
+  width: auto;
+  height: 72vh;
+  margin: 25vh 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-evenly;
+}
+
+.part_cards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.part_card {
+  background-color: transparent;
+  position: relative;
+  bottom: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.part_card:hover {
+  bottom: 5px;
+}
+
+.part_item_card {
+  width: 25rem;
+  height: 35rem;
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.part_item_card img {
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  position: absolute;
+}
+
+.part_card:hover .part_item_card img {
+  filter: brightness(90%);
+  box-shadow: 0 2px 8px #333333;
+}
+
+.part_card_text {
+  padding: 1rem;
+  width: 100%;
+  height: 8rem;
+  z-index: 1;
+  align-items: center;
+}
+
+.part_card_text h4 {
+  font-family: "Kanit", sans-serif;
+  color: #f0f0fa;
+  font-size: 4rem;
+  margin-bottom: 0.8rem;
+}

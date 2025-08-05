@@ -1,0 +1,211 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+:root {
+  --font-color-dark: #f7f7f0;
+  --mild-white: #f0f0fa;
+  --mild-black: #3f5da2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  color: var(--mild-white);
+  background-color: var(--mild-black);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--font-color-dark);
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.banner_text {
+  font-family: "Bungee", cursive;
+  user-select: none;
+}
+
+
+/* header */
+#navigation_bar {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.logo_section {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo_section #logo_wrapper {
+  margin-right: 0.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #f7f7f0;
+  border-radius: 50%;
+}
+
+header #logo_img {
+  color: #f0f0fa;
+  font-size: 2rem;
+}
+
+header a#logo {
+  font-size: 3rem;
+  font-family: "Bungee", cursive;
+  color: #f0f0fa;
+}
+
+
+
+
+.horizontal-scroll {
+  width: auto;
+  height: 76vh;
+  margin: 18vh 10rem 0 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: space-evenly;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 1rem;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background-color: #91a3ca;
+  border-radius: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: #334263;
+  border-radius: 20px;
+}
+
+
+.step_card {
+  flex: 0 0 auto;
+  background-color: transparent;
+  position: relative;
+  bottom: 0;
+  transition: all 0.15s ease-in-out;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  margin-top: 2rem;
+}
+
+.step_card:hover {
+  bottom: 5px;
+}
+
+.step_item_card {
+  width: 32rem;
+  height: 36rem;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.step_item_card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+  position: absolute;
+}
+
+.step_card:hover .step_item_card img {
+  filter: brightness(70%);
+  box-shadow: 0 2px 8px #333333;
+}
+
+.step_card_text {
+  padding: 1rem;
+  width: 100%;
+  height: 8rem;
+  z-index: 1;
+}
+
+.step_card_text h4 {
+  font-family: "Kanit", sans-serif;
+  color: #f0f0fa;
+  font-size: 3rem;
+  margin-top: -4rem;
+}
+
+.step_card_text h5 {
+  font-family: "Kanit", sans-serif;
+  color: #f0f0fa;
+  font-size: 1.5rem;
+  margin-top: -8rem;
+}
+
+.step_card_text h6 {
+  font-family: "Kanit", sans-serif;
+  font-weight: lighter;
+  color: #f0f0fa;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: rgb(207, 207, 218, 0);
+  padding: 0.5rem;
+  margin-top: -8rem;
+}
+
+.step_card:hover .step_card_text h4 {
+  color: #333333;
+}
+
+.step_card:hover .step_card_text h5 {
+  color: #333333;
+}
+
+.step_card:hover .step_card_text h6 {
+  color: #333333;
+  background-color: rgb(207, 207, 218, 0.8);
+  border-radius: 1rem;
+}

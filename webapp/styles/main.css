@@ -1,0 +1,514 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  color: #f7f7f0;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #f7f7f0;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.banner_text {
+  font-family: "Bungee", cursive;
+  user-select: none;
+}
+
+
+/* header */
+header {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.header_button {
+    border: none;  
+    padding: 0;     
+    background: none; 
+    cursor: pointer; 
+    color: #f7f7f0;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header .logo_section {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header .logo_section #logo_wrapper {
+  margin-right: 0.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #f7f7f0;
+  border-radius: 50%;
+}
+
+header #logo_img,
+header a#logo {
+  color: #f0f0fa;
+}
+
+header #logo_img {
+  font-size: 2rem;
+}
+
+header a#logo {
+  font-size: 3rem;
+  font-family: "Bungee", cursive;
+}
+
+header .nav_bar {
+  font-size: 1.2rem;
+}
+
+header .nav_btn {
+  text-shadow: none;
+  transition: all 0.2s ease-in-out;
+}
+
+header .nav_btn:hover {
+  text-shadow: 0 0 10px #587ac3;
+}
+
+header .func ul {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+header .func li {
+  position: relative;
+}
+
+header .func .nav_btn {
+  margin-right: 2rem;
+}
+
+header .user {
+  flex-direction: row;
+}
+
+header .user .nav_btn {
+  margin-left: 2rem;
+}
+
+header ul.modal {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 2rem;
+  background-color: #f0f0fa;
+  flex-direction: column;
+  padding: 0.4rem 0.8rem;
+  text-align: start;
+}
+
+header .modal li {
+  margin: 0.5rem 0;
+}
+
+header .modal a {
+  position: relative;
+  bottom: 0;
+  font-size: 0.8rem;
+  color: #333333;
+  transition: all 0.15s ease-in-out;
+}
+
+header .modal a:hover {
+  bottom: 2px;
+}
+
+.ani {
+  animation: ani01 2s linear infinite;
+}
+
+@keyframes ani01{
+  0% {
+    transform: rotate(0deg); /* set rotation */
+  }
+  100% {
+    transform: rotate(360deg); /* set rotation  */
+  }
+}
+
+/*--------------------------------------------------------*/
+/* Main page - main banner */
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  filter: brightness(90%);
+}
+
+.main h1,
+.main p,
+#main_text {
+  text-align: center;
+  user-select: none;
+}
+
+.main h1 {
+  margin-top: -4rem;
+  font-size: 8rem;
+}
+
+#main_text {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #f7f7f0;
+}
+/*--------------------------------------------------------*/
+
+
+/*--------------------------------------------------------*/
+/* Main page - About */
+.about {
+  background-image: url('./wallpapers/wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 91vh;
+  position: relative;
+}
+
+.about_box {
+  display: inline-block;
+  position: absolute;
+  padding: 1rem;
+}
+
+.about_box:hover {
+  backdrop-filter: blur(10px);
+  border-radius: 5rem;
+}
+
+.about_box p,
+.about_box h3 {
+  font-family: "Kanit", sans-serif;
+  color: #f0f0fa;
+}
+
+.about_box p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.about_box h3 {
+  font-family: "Bungee", cursive;
+  font-size: 3rem;
+}
+
+.ski, .snowboard {
+  position: absolute;
+}
+
+.ski {
+  top: 5%;
+  left: 10%;
+}
+
+.snowboard {
+  top: 45%;
+  left: 10%;
+}
+
+#learnmorebtn {
+  font-family: "Kanit", sans-serif;
+  font-size: 1rem;
+  color: #0088ff;
+}
+/*--------------------------------------------------------*/
+
+
+/*--------------------------------------------------------*/
+/* Main page - Class */
+.class {
+  width: 100%;
+  height: 91vh;
+  position: relative;
+  background-image: url('./wallpapers/boarding.jpg');
+  background-size: 100%;
+}
+
+.howtoenjoy {
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.welcome_ment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(207, 207, 218, 0.5);
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.welcome_ment h3 {
+  font-family: "Kanit", sans-serif;
+  color: #333333;
+  margin-top: -2rem;
+  font-size: 4rem;
+}
+
+#welcome {
+  font-family: "Kanit", sans-serif;
+  margin-top: 1rem;
+  color: #333333;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.howtoenjoy_btns {
+  display: grid;
+  grid-template-columns: 24rem 24rem;
+  grid-column-gap: 5rem;
+  width: 40rem;
+  height: 10rem;
+  margin-top: 2.4rem;
+  text-align: center;
+}
+
+.howtoenjoy_service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(247, 247, 240, 0.8);
+  border-radius: 4%;
+  padding: 1rem;
+}
+
+.howtoenjoy_service p {
+  font-family: "Bungee", sans-serif;
+  color: #3f5da2;
+  font-size: 1.8rem;
+}
+
+.howtoenjoy_btn {
+  font-family: "Roboto Condensed", sans-serif;
+  width: 16rem;
+  height: 3rem;
+  background-color: #333333;
+  z-index: 1;
+  color: #f7f7f0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  position: relative;
+  bottom: 0;
+  transition: all 0.15s ease-in-out;
+  box-shadow: none;
+  transition: background-color 0.3s ease-in-out, color 0.4s ease-in-out;
+}
+
+.howtoenjoy_btn:hover {
+  bottom: 2px;
+  box-shadow: 0 2px 4px #333333;
+  background-color: #587ac3;
+}
+/*--------------------------------------------------------*/
+
+/*--------------------------------------------------------*/
+/* Main page - Store */
+.store {
+  position: relative;
+  width: 100%;
+  height: 51vh;
+  background-color: #f7f7f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card {
+  background-color: transparent;
+  position: relative;
+  bottom: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.card:hover {
+  bottom: 5px;
+}
+
+.item_card {
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  border-radius: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.item_card img {
+  border-radius: 50rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  position: absolute;
+}
+
+.card:hover .item_card img {
+  filter: brightness(90%);
+  box-shadow: 0 4px 8px #333333;
+}
+
+.card_text {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_text h4 {
+  font-family: "Kanit", sans-serif;
+  color: #f7f7f0;
+  font-size: 2.2rem;
+}
+
+.card_text p {
+  font-family: "Kanit", sans-serif;
+  color: #f7f7f0;
+  font-size: 1rem;
+}
+/*--------------------------------------------------------*/
+
+/*--------------------------------------------------------*/
+/* footer */
+footer {
+  font-family: "Kanit", sans-serif;
+  width: 100%;
+  height: 40vh;
+  background-color: #333333;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.corp_info h2 {
+  margin-top: -3rem;
+  font-size: 4rem;
+}
+
+.corp_info p {
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+.footer_nav {
+  display: flex;
+}
+
+.footer_items {
+  margin-right: 10rem;
+}
+
+.footer_items h6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer_items li {
+  margin-bottom: 1rem;
+}
+
+.footer_items a {
+  font-family: "Kanit", sans-serif;
+  text-shadow: none;
+  font-size: 1.2rem;
+  transition: all 0.15s ease-in-out;
+}
+
+#author {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  user-select: none;
+}
+
+/*--------------------------------------------------------*/
